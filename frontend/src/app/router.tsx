@@ -5,6 +5,7 @@ import { LoadingSpinner } from '@/core/components/LoadingSpinner';
 
 const HomePage = lazy(() => import('@/pages/Home'));
 const CatalogPage = lazy(() => import('@/pages/Catalog'));
+const ProductDetailPage = lazy(() => import('@/pages/ProductDetail'));
 const GalleryPage = lazy(() => import('@/pages/Gallery'));
 const ContactPage = lazy(() => import('@/pages/Contact'));
 const NotFoundPage = lazy(() => import('@/pages/NotFound'));
@@ -28,6 +29,7 @@ export const AppRouter = () => {
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="catalogo" element={<CatalogPage />} />
+          <Route path="catalogo/:id" element={<ProductDetailPage />} />
           <Route path="galeria" element={<GalleryPage />} />
           <Route path="contato" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
